@@ -10,4 +10,7 @@
     repeating-linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   --width-block: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --color-shadow-lable: #e6e1e1ad;
+  --contour-heart: #000000;
+  --sparks-color: #FF0000;
+  --animation-fill-color: #FF0000;
 }
