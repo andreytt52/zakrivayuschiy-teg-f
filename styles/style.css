@@ -298,7 +298,6 @@ button::before:hover {
 }
 
 .save__button {
-  background-color: transparent;
   display: grid;
   gap: 8px;
   cursor: pointer;
