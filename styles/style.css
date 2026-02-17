@@ -134,12 +134,12 @@ main {
   filter: sepia(60%);
 }
 
-.concentration {
-  filter: blur(4px);
-}
-
 .beginning {
   filter: saturate(200%);
+}
+
+.concentration {
+  filter: blur(4px);
 }
 
 .card__block-text {
