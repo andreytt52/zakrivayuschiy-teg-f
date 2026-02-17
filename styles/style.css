@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family-basic), sans-serif;
-  font-variation-settings: var(--weight-basic-text);
+  font-variation-settings: "wght" var(--weight-basic-text);
   background-image: var(--bg-image);
   background-attachment: fixed;
   background-size: cover;
@@ -67,10 +67,9 @@ main {
 
 .card__title {
   font-family: inherit;
-  font-weight: var(--weight-basic-text);
   font-size: 18px;
   padding: 4px 10px;
-  font-weight: var(--weight-basic-title);
+  font-variation-settings: "wght" var(--weight-basic-title);
 }
 
 .card__block-image {
@@ -151,7 +150,7 @@ main {
 
 .card__text {
   font-family: var(--font-family-basic);
-  font-weight: var(--weight-basic-text);
+  font-variation-settings: "wght" var(--weight-basic-text);
   font-size: 18px;
   line-height: 21px;
 }
@@ -300,10 +299,8 @@ button::before:hover {
 
 .save__button {
   background-color: transparent;
-  border: none;
   display: grid;
   gap: 8px;
-  padding: 0;
   cursor: pointer;
   background-color: #ffffff;
   border: 2px solid #000000;
