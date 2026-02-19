@@ -279,7 +279,7 @@ main {
   color: #ffffff;
   position: relative;
   width: 2rem;
-  justify-self: ;
+  justify-self: center;
 }
 
 @media (width >= 1024px) {
