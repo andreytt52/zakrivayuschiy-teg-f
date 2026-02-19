@@ -60,7 +60,7 @@ main {
   padding-block-end: 25px;
 }
 
-.without-title {
+.card__content {
   display: grid;
   gap: 25px;
 }
@@ -172,6 +172,10 @@ main {
   max-block-size: 38px;
 }
 
+.card__icon-button:focus {
+  outline: none;
+}
+
 .card__icon-button:focus-visible {
   outline: none;
   border: 2px solid #000000;
@@ -235,25 +239,25 @@ main {
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
-  transition: fill linear 0.3s 0.06s;
+  transition: fill linear 0.3s 0.05s;
 }
 
 .card__like-button {
-  font-family: var(--font-family-accent), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  background-color: transparent;
-  border: 2px solid #000000;
-  cursor: pointer;
   width: 130px;
   height: 38px;
 }
 
 .button {
-  transition: box-shadow 0.3s ease;
+  font-family: var(--font-family-accent), fantasy;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #000000;
   position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -261,7 +265,7 @@ main {
   position: absolute;
   transform: translateX(-100%);
   background-color: #000000;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   inset: 0;
 }
 
@@ -269,21 +273,31 @@ main {
   transform: translateX(0);
 }
 
-.button span,
-.button .save_icon-floppy {
+.save_icon-floppy {
   mix-blend-mode: difference;
   z-index: 2;
   color: #ffffff;
   position: relative;
+  width: 2rem;
+  justify-self: center;
+}
+
+@media (width >= 1024px) {
+  .save_icon-floppy {
+    width: 21px;
+  }
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 #000000;
-  transition: box-shadow 0.3s ease;
 }
 
-button::before:hover {
+.button::before:hover {
   transform: translateX(100%);
 }
 
@@ -300,9 +314,7 @@ button::before:hover {
 .save__button {
   display: grid;
   gap: 8px;
-  cursor: pointer;
   background-color: #ffffff;
-  border: 2px solid #000000;
   padding: 15px 18px;
   justify-self: center;
 }
@@ -314,22 +326,15 @@ button::before:hover {
   }
 }
 
-.save_icon-floppy {
-  width: 2rem;
-  justify-self: center;
-}
-
-@media (width >= 1024px) {
-  .save_icon-floppy {
-    width: 21px;
-  }
-}
-
 .button__text {
   font-family: var(--font-family-accent), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
+  mix-blend-mode: difference;
+  z-index: 2;
+  color: #ffffff;
+  position: relative;
 }
 
 .dialog_window {
@@ -355,10 +360,7 @@ button::before:hover {
 }
 
 .dialog_window__button {
-  background-color: transparent;
-  border: 2px solid #000000;
   padding: 12.5px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
 }
@@ -372,10 +374,6 @@ button::before:hover {
 }
 
 .dialog_window__ok {
-  font-family: var(--font-family-accent), fantasy;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 90%;
   text-transform: uppercase;
 }
 
